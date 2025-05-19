@@ -10,11 +10,11 @@ export const youtubeVideos = [
     thumbnail: "https://i.ytimg.com/vi/pl4Vvkr_x4c/maxresdefault.jpg",
   },
   {
-    id: "E9z5BXTaP5I",
-    title: "Kids in Manafwa Uganda",
+    id: "JfQXs28brnY",
+    title: "Gerald at Berakhah Childcare",
     description:
-      "See the children enjoying activities in Manafwa, Uganda with Pastor Paul Gidudu and the Berakhah ChildCare team.",
-    thumbnail: "https://i.ytimg.com/vi/E9z5BXTaP5I/hqdefault.jpg",
+      "See Gerald and other children at Berakhah Childcare in Uganda with Pastor Paul Gidudu and the team.",
+    thumbnail: "https://i.ytimg.com/vi/JfQXs28brnY/hqdefault.jpg",
   },
 ];
 
@@ -107,10 +107,10 @@ export const galleryImages = [
   },
   {
     id: 13,
-    src: "https://i.ytimg.com/vi/E9z5BXTaP5I/hqdefault.jpg",
-    alt: "Kids in Manafwa",
+    src: "https://i.ytimg.com/vi/JfQXs28brnY/hqdefault.jpg",
+    alt: "Gerald at Berakhah Childcare",
     category: ["children", "events"],
-    caption: "Children enjoying activities in Manafwa, Uganda",
+    caption: "Gerald and other children at Berakhah Childcare in Uganda",
   },
   {
     id: 14,

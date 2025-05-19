@@ -1,4 +1,5 @@
 import React from "react";
+import { heroImages } from "../data";
 
 function Stories() {
   const stories = [
@@ -49,7 +50,10 @@ function Stories() {
       {/* Hero Section */}
       <div className="relative">
         <div className="absolute inset-0 bg-indigo-900 bg-opacity-60"></div>
-        <div className="relative bg-[url('https://www.berakhah.org/wp-content/uploads/2018/08/berakhah_children-care4.jpg')] bg-cover bg-center h-[60vh] flex items-center">
+        <div
+          className="relative bg-cover bg-center h-[60vh] flex items-center"
+          style={{ backgroundImage: `url(${heroImages.stories})` }}
+        >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center">
               <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">

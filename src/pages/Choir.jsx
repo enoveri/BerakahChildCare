@@ -14,7 +14,8 @@ function Choir() {
       <div className="relative">
         <div className="absolute inset-0 bg-indigo-900 bg-opacity-60"></div>
         <div
-          className={`relative bg-[url('${heroImages.choir}')] bg-cover bg-center h-[60vh] flex items-center`}
+          className="relative bg-cover bg-center h-[60vh] flex items-center"
+          style={{ backgroundImage: `url(${heroImages.choir})` }}
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center">
@@ -143,13 +144,13 @@ function Choir() {
             </p>
           </div>
 
-          <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-lg p-8 shadow-lg">
-            <div className="md:flex md:items-center md:justify-between">
-              <div className="md:w-2/3">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+          <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-lg p-4 sm:p-6 md:p-8 shadow-lg">
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between">
+              <div className="w-full md:w-2/3 md:pr-6">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
                   Why Book Our Choir?
                 </h3>
-                <ul className="list-disc pl-5 text-gray-600 space-y-2 mb-6">
+                <ul className="list-disc pl-5 text-gray-600 space-y-1 sm:space-y-2 mb-4 sm:mb-6 text-sm sm:text-base">
                   <li>Authentic Ugandan cultural performances</li>
                   <li>Inspiring stories of hope and transformation</li>
                   <li>Beautiful voices and energetic traditional dances</li>
@@ -158,14 +159,14 @@ function Choir() {
                   </li>
                   <li>Support our mission through your booking fee</li>
                 </ul>
-                <p className="text-gray-600 mb-6">
+                <p className="text-gray-600 mb-6 text-sm sm:text-base">
                   All proceeds from choir bookings go directly to supporting the
                   children at Berakhah ChildCare.
                 </p>
               </div>
-              <div className="mt-6 md:mt-0 md:w-1/3">
-                <form className="bg-white p-6 rounded-lg shadow-md">
-                  <div className="mb-4">
+              <div className="w-full md:w-1/3">
+                <form className="bg-white p-4 sm:p-6 rounded-lg shadow-md">
+                  <div className="mb-3 sm:mb-4">
                     <label
                       htmlFor="name"
                       className="block text-sm font-medium text-gray-700 mb-1"
@@ -175,10 +176,10 @@ function Choir() {
                     <input
                       type="text"
                       id="name"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-sm"
                     />
                   </div>
-                  <div className="mb-4">
+                  <div className="mb-3 sm:mb-4">
                     <label
                       htmlFor="email"
                       className="block text-sm font-medium text-gray-700 mb-1"
@@ -188,10 +189,10 @@ function Choir() {
                     <input
                       type="email"
                       id="email"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-sm"
                     />
                   </div>
-                  <div className="mb-4">
+                  <div className="mb-3 sm:mb-4">
                     <label
                       htmlFor="event-date"
                       className="block text-sm font-medium text-gray-700 mb-1"
@@ -201,10 +202,10 @@ function Choir() {
                     <input
                       type="date"
                       id="event-date"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-sm"
                     />
                   </div>
-                  <div className="mb-4">
+                  <div className="mb-3 sm:mb-4">
                     <label
                       htmlFor="event-type"
                       className="block text-sm font-medium text-gray-700 mb-1"
@@ -213,7 +214,7 @@ function Choir() {
                     </label>
                     <select
                       id="event-type"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-sm"
                     >
                       <option>Church Service</option>
                       <option>School Event</option>
@@ -225,7 +226,7 @@ function Choir() {
                   </div>
                   <button
                     type="submit"
-                    className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 transition-colors duration-300"
+                    className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 transition-colors duration-300 text-sm sm:text-base font-medium"
                   >
                     Request Booking
                   </button>
@@ -252,7 +253,7 @@ function Choir() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 mb-8 sm:mb-12 px-4 sm:px-0">
             {youtubeVideos.map((video) => (
               <div
                 key={video.id}
@@ -268,18 +269,20 @@ function Choir() {
                     allowFullScreen
                   ></iframe>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                <div className="p-4 sm:p-6">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1 sm:mb-2">
                     {video.title}
                   </h3>
-                  <p className="text-gray-600">{video.description}</p>
+                  <p className="text-gray-600 text-sm sm:text-base">
+                    {video.description}
+                  </p>
                 </div>
               </div>
             ))}
           </div>
 
           {/* Gallery of thumbnails */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-12 px-4 sm:px-0">
             {youtubeVideos.map((video) => (
               <div
                 key={video.id}
@@ -288,13 +291,15 @@ function Choir() {
                 <img
                   src={video.thumbnail}
                   alt={video.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-36 sm:h-48 object-cover"
                 />
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <div className="p-4 sm:p-6">
+                  <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1 sm:mb-2">
                     {video.title}
                   </h3>
-                  <p className="text-gray-600 text-sm">{video.description}</p>
+                  <p className="text-gray-600 text-xs sm:text-sm line-clamp-3">
+                    {video.description}
+                  </p>
                 </div>
               </div>
             ))}
@@ -306,13 +311,13 @@ function Choir() {
                     .src
                 }
                 alt="Berakhah Choir"
-                className="w-full h-48 object-cover"
+                className="w-full h-36 sm:h-48 object-cover"
               />
-              <div className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              <div className="p-4 sm:p-6">
+                <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1 sm:mb-2">
                   Music Education
                 </h3>
-                <p className="text-gray-600 text-sm">
+                <p className="text-gray-600 text-xs sm:text-sm">
                   Through our choir program, children develop musical talents
                   and gain confidence performing.
                 </p>
@@ -320,22 +325,22 @@ function Choir() {
             </div>
           </div>
 
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden mx-4 sm:mx-0">
+            <div className="p-4 sm:p-6 md:p-8">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
                 Upcoming Performances
               </h3>
 
-              <div className="space-y-8 mt-6">
-                <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-lg p-6">
-                  <div className="md:flex md:items-center md:justify-between">
+              <div className="space-y-4 sm:space-y-8 mt-4 sm:mt-6">
+                <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-lg p-4 sm:p-6">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                     <div>
-                      <h4 className="text-xl font-bold text-gray-900">
+                      <h4 className="text-lg sm:text-xl font-bold text-gray-900">
                         Annual Christmas Concert
                       </h4>
-                      <div className="mt-2 flex items-center text-gray-700">
+                      <div className="mt-2 flex items-center text-gray-700 text-sm sm:text-base">
                         <svg
-                          className="h-5 w-5 text-indigo-500 mr-2"
+                          className="h-4 w-4 sm:h-5 sm:w-5 text-indigo-500 mr-2"
                           fill="currentColor"
                           viewBox="0 0 20 20"
                         >
@@ -347,9 +352,9 @@ function Choir() {
                         </svg>
                         <span>December 20, 2024</span>
                       </div>
-                      <div className="mt-1 flex items-center text-gray-700">
+                      <div className="mt-1 flex items-center text-gray-700 text-sm sm:text-base">
                         <svg
-                          className="h-5 w-5 text-indigo-500 mr-2"
+                          className="h-4 w-4 sm:h-5 sm:w-5 text-indigo-500 mr-2"
                           fill="currentColor"
                           viewBox="0 0 20 20"
                         >
@@ -362,30 +367,30 @@ function Choir() {
                         <span>Mbale Community Center</span>
                       </div>
                     </div>
-                    <div className="mt-4 md:mt-0">
+                    <div className="mt-3 md:mt-0">
                       <a
                         href="#book-choir"
-                        className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"
+                        className="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 border border-transparent text-sm sm:text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"
                       >
                         Book Tickets
                       </a>
                     </div>
                   </div>
-                  <p className="mt-4 text-gray-600">
+                  <p className="mt-3 sm:mt-4 text-gray-600 text-sm sm:text-base">
                     Our annual Christmas celebration featuring traditional and
                     contemporary holiday songs.
                   </p>
                 </div>
 
-                <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-lg p-6">
-                  <div className="md:flex md:items-center md:justify-between">
+                <div className="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-lg p-4 sm:p-6">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                     <div>
-                      <h4 className="text-xl font-bold text-gray-900">
+                      <h4 className="text-lg sm:text-xl font-bold text-gray-900">
                         Easter Celebration
                       </h4>
-                      <div className="mt-2 flex items-center text-gray-700">
+                      <div className="mt-2 flex items-center text-gray-700 text-sm sm:text-base">
                         <svg
-                          className="h-5 w-5 text-indigo-500 mr-2"
+                          className="h-4 w-4 sm:h-5 sm:w-5 text-indigo-500 mr-2"
                           fill="currentColor"
                           viewBox="0 0 20 20"
                         >
@@ -397,9 +402,9 @@ function Choir() {
                         </svg>
                         <span>April 12, 2025</span>
                       </div>
-                      <div className="mt-1 flex items-center text-gray-700">
+                      <div className="mt-1 flex items-center text-gray-700 text-sm sm:text-base">
                         <svg
-                          className="h-5 w-5 text-indigo-500 mr-2"
+                          className="h-4 w-4 sm:h-5 sm:w-5 text-indigo-500 mr-2"
                           fill="currentColor"
                           viewBox="0 0 20 20"
                         >
@@ -412,16 +417,16 @@ function Choir() {
                         <span>Busamaga Church</span>
                       </div>
                     </div>
-                    <div className="mt-4 md:mt-0">
+                    <div className="mt-3 md:mt-0">
                       <a
                         href="#book-choir"
-                        className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"
+                        className="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 border border-transparent text-sm sm:text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"
                       >
                         Book Tickets
                       </a>
                     </div>
                   </div>
-                  <p className="mt-4 text-gray-600">
+                  <p className="mt-3 sm:mt-4 text-gray-600 text-sm sm:text-base">
                     A special Easter performance celebrating hope and new
                     beginnings.
                   </p>

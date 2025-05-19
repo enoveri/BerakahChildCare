@@ -34,7 +34,8 @@ function Gallery() {
       <div className="relative">
         <div className="absolute inset-0 bg-indigo-900 bg-opacity-60"></div>
         <div
-          className={`relative bg-[url('${heroImages.gallery}')] bg-cover bg-center h-[60vh] flex items-center`}
+          className="relative bg-cover bg-center h-[60vh] flex items-center"
+          style={{ backgroundImage: `url(${heroImages.gallery})` }}
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center">
@@ -68,12 +69,12 @@ function Gallery() {
           </div>
 
           {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sm:mb-12 px-2 sm:px-0">
             {galleryCategories.map((category) => (
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
-                className={`px-4 py-2 rounded-full ${
+                className={`px-3 sm:px-4 py-1 sm:py-2 rounded-full text-sm sm:text-base ${
                   activeCategory === category.id
                     ? "bg-indigo-600 text-white"
                     : "bg-white text-gray-700 hover:bg-gray-100"
@@ -110,21 +111,22 @@ function Gallery() {
 
       {/* Lightbox */}
       {selectedImage && (
-        <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
+        <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-2 sm:p-4 overflow-y-auto">
           <div className="max-w-4xl w-full bg-white rounded-lg overflow-hidden">
             <div className="relative">
               <img
                 src={selectedImage.src}
                 alt={selectedImage.alt}
-                className="w-full h-auto max-h-[80vh] object-contain"
+                className="w-full h-auto max-h-[70vh] sm:max-h-[80vh] object-contain"
               />
               <button
                 onClick={closeLightbox}
-                className="absolute top-4 right-4 bg-white rounded-full p-2 shadow-lg"
+                className="absolute top-2 right-2 sm:top-4 sm:right-4 bg-white rounded-full p-1 sm:p-2 shadow-lg"
+                aria-label="Close lightbox"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-gray-900"
+                  className="h-5 w-5 sm:h-6 sm:w-6 text-gray-900"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -138,11 +140,13 @@ function Gallery() {
                 </svg>
               </button>
             </div>
-            <div className="p-6">
-              <p className="text-lg font-semibold text-gray-900">
+            <div className="p-3 sm:p-6">
+              <p className="text-base sm:text-lg font-semibold text-gray-900">
                 {selectedImage.alt}
               </p>
-              <p className="text-gray-600 mt-2">{selectedImage.caption}</p>
+              <p className="text-sm sm:text-base text-gray-600 mt-1 sm:mt-2">
+                {selectedImage.caption}
+              </p>
             </div>
           </div>
         </div>
